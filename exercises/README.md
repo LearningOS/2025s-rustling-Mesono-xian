@@ -15,7 +15,7 @@
 | hashmaps               | §8.3                |
 | options                | §10.1               |v
 | error_handling         | §9                  |
-| generics               | §10                 |
+| generics               | §10                 |v
 | traits                 | §10.2               |
 | tests                  | §11.1               |
 | lifetimes              | §10.3               |
