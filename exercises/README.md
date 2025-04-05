@@ -2,18 +2,18 @@
 
 | Exercise               | Book Chapter        |
 | ---------------------- | ------------------- |
-| variables              | §3.1                |
-| functions              | §3.3                |
-| if                     | §3.5                |
-| primitive_types        | §3.2, §4.3          |
-| vecs                   | §8.1                |
-| move_semantics         | §4.1-2              |
-| structs                | §5.1, §5.3          |
-| enums                  | §6, §18.3           |
-| strings                | §8.2                |
+| variables              | §3.1                |v
+| functions              | §3.3                |v
+| if                     | §3.5                |v
+| primitive_types        | §3.2, §4.3          |v
+| vecs                   | §8.1                |v
+| move_semantics         | §4.1-2              |v
+| structs                | §5.1, §5.3          |v
+| enums                  | §6, §18.3           |v
+| strings                | §8.2                |v
 | modules                | §7                  |
 | hashmaps               | §8.3                |
-| options                | §10.1               |
+| options                | §10.1               |v
 | error_handling         | §9                  |
 | generics               | §10                 |
 | traits                 | §10.2               |
