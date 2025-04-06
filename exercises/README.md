@@ -12,11 +12,11 @@
 | enums                  | §6, §18.3           |v
 | strings                | §8.2                |v
 | modules                | §7                  |
-| hashmaps               | §8.3                |
+| hashmaps               | §8.3                |v
 | options                | §10.1               |v
 | error_handling         | §9                  |
 | generics               | §10                 |v
-| traits                 | §10.2               |
+| traits                 | §10.2               |v
 | tests                  | §11.1               |
 | lifetimes              | §10.3               |
 | iterators              | §13.2-4             |
