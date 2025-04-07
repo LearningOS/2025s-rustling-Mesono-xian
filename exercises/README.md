@@ -18,7 +18,7 @@
 | generics               | §10                 |v
 | traits                 | §10.2               |v
 | tests                  | §11.1               |
-| lifetimes              | §10.3               |
+| lifetimes              | §10.3               |v
 | iterators              | §13.2-4             |
 | threads                | §16.1-3             |
 | smart_pointers         | §15, §16.3          |
