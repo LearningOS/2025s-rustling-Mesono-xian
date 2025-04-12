@@ -20,8 +20,8 @@
 | tests                  | §11.1               |
 | lifetimes              | §10.3               |v
 | iterators              | §13.2-4             |v
-| threads                | §16.1-3             |
-| smart_pointers         | §15, §16.3          |
+| threads                | §16.1-3             |v
+| smart_pointers         | §15, §16.3          |v
 | macros                 | §19.6               |
 | clippy                 | §21.4               |
 | conversions            | n/a                 |
