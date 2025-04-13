@@ -2,7 +2,6 @@
 	single linked list merge
 	This problem requires you to merge two ordered singly linked lists into one ordered singly linked list
 */
-// I AM NOT DONE
 
 use std::fmt::{self, Display, Formatter};
 use std::ptr::NonNull;
@@ -69,15 +68,54 @@ impl<T> LinkedList<T> {
             },
         }
     }
-	pub fn merge(list_a:LinkedList<T>,list_b:LinkedList<T>) -> Self
-	{
+	//pub fn merge(list_a:LinkedList<T>,list_b:LinkedList<T>) -> Self
+	//{
 		//TODO
-		Self {
-            length: 0,
-            start: None,
-            end: None,
+	//	Self {
+    //        length: 0,
+    //        start: None,
+    //        end: None,
+    //    }
+	//}
+    pub fn merge(mut list_a: LinkedList<T>, mut list_b: LinkedList<T>) -> Self 
+    where 
+        T:Ord + Clone,
+    {
+        let mut merged_list = LinkedList::<T>::new();
+
+        // 使用两个指针遍历两个链表
+        while let (Some(ptr_a), Some(ptr_b)) = (list_a.start, list_b.start) {
+            unsafe{  
+            // 获取当前两个节点的值
+            let val_a = &(*ptr_a.as_ptr()).val;
+            let val_b = &(*ptr_b.as_ptr()).val;
+
+            // 比较并插入较小的节点
+            if val_a <= val_b {
+                merged_list.add(val_a.clone()); // 使用 .clone() 确保值被传递
+                list_a.start = (*ptr_a.as_ptr()).next;
+            } else {
+                merged_list.add(val_b.clone());
+                list_b.start = (*ptr_b.as_ptr()).next
+            }
         }
-	}
+    }
+
+        // 添加剩余的节点
+        while let Some(ptr_a) = list_a.start {
+            let val_a = unsafe { ptr_a.as_ref() };
+            merged_list.add(val_a.val.clone());
+            list_a.start = unsafe { val_a.next };
+        }
+
+        while let Some(ptr_b) = list_b.start {
+            let val_b = unsafe { ptr_b.as_ref() };
+            merged_list.add(val_b.val.clone());
+            list_b.start = unsafe { val_b.next };
+        }
+
+        merged_list
+    }
 }
 
 impl<T> Display for LinkedList<T>
